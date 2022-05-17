@@ -1,10 +1,14 @@
 export class Cliente {
+  //ao colocar apenas o get, meu acessor vai poder apenas acessar o valor de CPF, mas não vai poder alterar o valor.
   get cpf(){
-    this._cpf;
   }
   
-  constructor(nome, cpf){
+  constructor(nome, cpf, senha){
     this.nome = nome;
     this._cpf = cpf;
+    this._senha = senha
+  }
+  autenticar(){
+    return false;
   }
 }

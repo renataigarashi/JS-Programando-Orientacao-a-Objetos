@@ -1,25 +1,25 @@
-import { Cliente } from "./Cliente.js";
-import { ContaCorrente } from "./ContaCorrente.js"
-import { ContaPoupanca } from "./ContaPoupanca.js";
+import { Cliente } from "./Cliente.js"
+import { Gerente } from "./Funcionario/Gerente.js"
+import { Diretor } from "./Funcionario/Diretor.js"
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js"
+import { ContaCorrente } from "./Conta/ContaCorrente.js"
+
+const diretor = new Diretor("Renata", 10000, 12345678900)
+const gerente = new Gerente("Filomena", 6500, 11223456780)
 
 
-const client1 = new Cliente('Renata', 321654987);
+diretor.cadastrarSenha(123456789)
+gerente.cadastrarSenha(987654)
 
+// const estaLogado = SistemaAutenticacao.login(diretor, 123456789)
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, 123456789)
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, 98765)
 
+const novaCliente = new Cliente('Filipa', 99987655543, 45);
 
-const contaClient1 = new ContaCorrente(112, client1);
-contaClient1.depositar(3000);
-console.log("Saldo antes do saque".toUpperCase());
-console.log(contaClient1);
+console.log('Dir está logado? ', diretorEstaLogado)
+console.log('Gerente está logado? ', gerenteEstaLogado)
 
-contaClient1.sacar(100)
-console.log("Saldo apos o saque".toUpperCase());
-console.log(contaClient1);
-
-// const contaPoupanca = new ContaPoupanca(200, client1, 112)
-// contaPoupanca.depositar(10000);
-// console.log(contaPoupanca)
-
-// contaClient1.teste()
-
+const clienteFilipa = SistemaAutenticacao.login(novaCliente, 456)
+console.log('Filipa está logado? ', clienteFilipa)
 

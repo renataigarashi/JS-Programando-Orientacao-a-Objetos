@@ -1,0 +1,30 @@
+// import { ContaCorrente } from "./Conta/ContaCorrente.js"
+// import { ContaPoupanca } from "./Conta/ContaPoupanca.js";
+
+
+// const client1 = new Cliente('Renata', 321654987);
+
+
+
+// const contaClient1 = new ContaCorrente(112, client1);
+// contaClient1.depositar(2590);
+// client1.nome = 'Renatinha'
+
+// // console.log(contaClient1);
+
+// // const contaPoupanca = new ContaPoupanca(200, client1, 112)
+
+// // // const conta = new Conta(1200, client1, 123)
+// // // console.log(conta);
+// // console.log(contaPoupanca)
+
+// // contaPoupanca.sacar(100)
+// // console.log('saldo conta poupança apos saque de $100 + taxa:', contaPoupanca)
+// // // console.log(ContaCorrente.numeroDeContas)
+
+
+// const contaSalario = new ContaSalario(client1);
+// console.log(contaSalario)
+// contaSalario.depositar(1000);
+// contaSalario.sacar(10);
+// console.log(contaSalario)
