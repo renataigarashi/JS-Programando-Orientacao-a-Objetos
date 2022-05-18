@@ -15,7 +15,7 @@ gerente.cadastrarSenha(987654)
 const diretorEstaLogado = SistemaAutenticacao.login(diretor, 123456789)
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente, 98765)
 
-const novaCliente = new Cliente('Filipa', 99987655543, 45);
+const novaCliente = new Cliente('Filipa', 99987655543, 456);
 
 console.log('Dir está logado? ', diretorEstaLogado)
 console.log('Gerente está logado? ', gerenteEstaLogado)

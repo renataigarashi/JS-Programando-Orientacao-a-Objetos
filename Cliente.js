@@ -8,7 +8,7 @@ export class Cliente {
     this._cpf = cpf;
     this._senha = senha
   }
-  autenticar(){
-    return false;
+  autenticar(senha){
+    return senha == this._senha
   }
 }
